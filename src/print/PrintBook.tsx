@@ -207,7 +207,7 @@ function VideoPage({ video, first }: { video: Video; first: boolean }) {
   );
 }
 
-function WisdomMapPage() {
+function WisdomMapPage({ chapterPage }: { chapterPage: (id: string) => number }) {
   const nodes = chapters.map((c, i) => ({ c, pos: ['tl', 'tr', 'bl', 'br'][i] }));
   return (
     <div className="safe map-page">
@@ -226,11 +226,11 @@ function WisdomMapPage() {
           <span>{wisdomMap.center}</span>
         </div>
         {nodes.map(({ c, pos }) => (
-          <div className={`map-node ${pos}`} key={c.id}>
+          <a className={`map-node ${pos}`} key={c.id} href={`#p-${chapterPage(c.id)}`}>
             <span className="map-dot">{c.number}</span>
             <p className="map-title">{c.mapTitle}</p>
             <p className="map-summary">{c.mapSummary}</p>
-          </div>
+          </a>
         ))}
       </div>
       <p className="map-foot">{wisdomMap.footnote}</p>
@@ -246,13 +246,15 @@ function Toc({ entries }: { entries: { label: string; title: string; theme: stri
       <ol className="toc">
         {entries.map((e) => (
           <li key={e.title}>
-            <span className="toc-num">{e.label}</span>
-            <span className="toc-title">
-              {e.title}
-              <span className="toc-theme">{e.theme}</span>
-            </span>
-            <span className="toc-dots" aria-hidden="true" />
-            <span className="toc-pg">{e.page}</span>
+            <a href={`#p-${e.page}`} className="toc-row">
+              <span className="toc-num">{e.label}</span>
+              <span className="toc-title">
+                {e.title}
+                <span className="toc-theme">{e.theme}</span>
+              </span>
+              <span className="toc-dots" aria-hidden="true" />
+              <span className="toc-pg">{e.page}</span>
+            </a>
           </li>
         ))}
       </ol>
@@ -264,6 +266,8 @@ function Toc({ entries }: { entries: { label: string; title: string; theme: stri
 
 function buildPages(): PageSpec[] {
   const pages: PageSpec[] = [];
+  // resolved lazily at render time, once the full list exists
+  const chapterPage = (id: string) => pages.findIndex((p) => p.tocKey === id) + 1;
   const add = (p: PageSpec) => pages.push(p);
 
   add({
@@ -334,7 +338,7 @@ function buildPages(): PageSpec[] {
     ),
   });
 
-  add({ key: 'map', tocKey: 'map', folio: true, render: () => <WisdomMapPage /> });
+  add({ key: 'map', tocKey: 'map', folio: true, render: () => <WisdomMapPage chapterPage={chapterPage} /> });
 
   for (const ch of chapters) {
     add({ key: `${ch.id}-opener`, tocKey: ch.id, folio: false, render: () => <ChapterOpener chapter={ch} /> });
@@ -471,7 +475,13 @@ function buildPages(): PageSpec[] {
   return pages;
 }
 
-export function PrintBook() {
+interface BookPagesProps {
+  /** Wrap each page in a `.leaf` element (used by the flipbook). */
+  leaves?: boolean;
+}
+
+/** The 40 A5 pages. Shared by the PDF export (print.html) and the flipbook website. */
+export function BookPages({ leaves = false }: BookPagesProps) {
   const pages = buildPages();
   const pageOf = (tocKey: string) => pages.findIndex((p) => p.tocKey === tocKey) + 1;
   const tocEntries = [
@@ -482,24 +492,60 @@ export function PrintBook() {
     { label: '', title: 'A Note to Carry Home', theme: 'Penutup', page: pageOf('closing') },
   ];
 
+  return pages.map((p, i) => {
+    const n = i + 1;
+    const side = n % 2 === 0 ? 'verso' : 'recto';
+    const page = (
+      <section
+        className={`page ${side} page-${p.key}`}
+        key={p.key}
+        id={`p-${n}`}
+        data-page={n}
+        data-key={p.key}
+        aria-label={`Halaman ${n}`}
+      >
+        {p.key === 'toc' ? <Toc entries={tocEntries} /> : p.render(n)}
+        {p.key === 'opening' && <Sprig className="corner-sprig" leaves={5} />}
+        {p.folio && (
+          <footer className="folio">
+            <span className="folio-n">{n}</span>
+            <span className="folio-t">{RUN_TITLE}</span>
+          </footer>
+        )}
+      </section>
+    );
+    if (!leaves) return page;
+    const hard = n === 1 || n === pages.length;
+    return (
+      <div className={`leaf${hard ? ' leaf-cover' : ''}`} key={p.key} data-density={hard ? 'hard' : 'soft'}>
+        {page}
+      </div>
+    );
+  });
+}
+
+export const BOOK_PAGE_COUNT = buildPages().length;
+
+/** Table-of-contents targets for the flipbook jump menu. */
+export function bookSections(): { title: string; theme: string; page: number }[] {
+  const pages = buildPages();
+  const pageOf = (k: string) => pages.findIndex((p) => p.tocKey === k) + 1;
+  return [
+    { title: 'Sampul', theme: '', page: 1 },
+    { title: 'Contents', theme: 'Daftar isi', page: 3 },
+    { title: 'A Moment of Sharing', theme: 'Opening', page: pageOf('opening') },
+    { title: 'What We Learned Together', theme: 'Wisdom Map', page: pageOf('map') },
+    ...chapters.map((c) => ({ title: `${c.number} · ${c.title}`, theme: c.theme, page: pageOf(c.id) })),
+    { title: 'A Little More to Explore', theme: 'Pilihan Video', page: pageOf('explore') },
+    { title: 'A Moment to Reflect', theme: 'Refleksi', page: pageOf('reflect') },
+    { title: 'A Note to Carry Home', theme: 'Penutup', page: pageOf('closing') },
+  ];
+}
+
+export function PrintBook() {
   return (
-    <main className="book" data-pages={pages.length}>
-      {pages.map((p, i) => {
-        const n = i + 1;
-        const side = n % 2 === 0 ? 'verso' : 'recto';
-        return (
-          <section className={`page ${side} page-${p.key}`} key={p.key} data-page={n} data-key={p.key}>
-            {p.key === 'toc' ? <Toc entries={tocEntries} /> : p.render(n)}
-            {p.key === 'opening' && <Sprig className="corner-sprig" leaves={5} />}
-            {p.folio && (
-              <footer className="folio">
-                <span className="folio-n">{n}</span>
-                <span className="folio-t">{RUN_TITLE}</span>
-              </footer>
-            )}
-          </section>
-        );
-      })}
+    <main className="book" data-pages={BOOK_PAGE_COUNT}>
+      <BookPages />
     </main>
   );
 }

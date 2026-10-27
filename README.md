@@ -8,9 +8,12 @@ Two editions, one identity:
 1. **Keepsake PDF** — `A_Collection_of_Wisdom.pdf` (also `public/A_Collection_of_Wisdom.pdf`).
    A5 portrait, 40 pages, real selectable text, embedded fonts, clickable links and a scannable QR code for each of the
    seven curated videos.
-2. **Interactive web edition** — a static React site: editorial hero, the opening story, an interactive wisdom map,
-   all four chapters with expandable practical notes and copyable quotes, seven video cards with topic filters,
-   a private reflection space, the closing letter and a PDF download.
+2. **Flipbook website** — the same 40 pages as a real book you open, page through and close
+   (live at https://collection-of-wisdom.vercel.app). Two-page spreads on desktop/tablet, single pages on phones;
+   turn pages by tapping, swiping, dragging a corner, the arrow buttons or ← → keys. The contents page and wisdom map
+   are clickable, video titles/thumbnails/QR open YouTube, “Daftar isi” jumps to any section, “Perbesar” shows the
+   current page(s) at a comfortable reading size, and every page has a shareable link (`…/#p-17`).
+   Page turning uses [StPageFlip](https://github.com/Nodlik/StPageFlip) (`page-flip`, MIT).
 
 Both are rendered from the **same content files**, so wording never drifts between them.
 
@@ -18,7 +21,7 @@ Both are rendered from the **same content files**, so wording never drifts betwe
 
 ```bash
 npm install
-npm run dev       # local site at http://localhost:5173
+npm run dev       # local flipbook at http://localhost:5173 (print layout: /print.html)
 npm run build     # type-check + production build into dist/
 npm run preview   # serve dist/ locally
 ```
@@ -41,7 +44,7 @@ npm run qa        # PDF checks + contact sheet, then website screenshots and int
 | The seven videos (IDs, titles, takeaways, categories) | `src/content/videos.ts` — the only place URLs live |
 | Colours and type families (both editions) | `src/styles/tokens.css` |
 | Print layout (A5 page templates) | `src/print/PrintBook.tsx`, `src/print/print.css` |
-| Website layout | `src/App.tsx`, `src/components/*`, `src/styles/site.css` |
+| Flipbook reader (toolbar, zoom, page turning) | `src/book/FlipBook.tsx`, `src/book/ZoomView.tsx`, `src/book/book.css` |
 
 After editing content run `npm run pdf` (it also refreshes `content/editorial-manuscript.md` and
 `content/video-catalog.json`), then `npm run qa`, and commit the new PDF.
@@ -50,20 +53,22 @@ After editing content run `npm run pdf` (it also refreshes `content/editorial-ma
 
 It is a plain static build with relative paths (`base: './'`), so `dist/` works on any static host:
 
-- **Vercel / Netlify**: build command `npm run build`, output directory `dist`.
+- **Vercel**: already configured in `vercel.json` (build `npm run build`, output `dist`). Pushing to `main` redeploys.
+- **Netlify**: build command `npm run build`, output directory `dist`.
   The committed `public/A_Collection_of_Wisdom.pdf` is copied into the build automatically.
 - **GitHub Pages**: publish the contents of `dist/`.
 
 No backend, accounts, analytics or API keys. The only outbound requests a reader makes are the YouTube links they click.
-Nothing has been deployed yet — there is no live URL.
+Live on Vercel at https://collection-of-wisdom.vercel.app, connected to this repository's `main` branch.
 
 ## Project map
 
 ```
 src/content/        book.ts, videos.ts      shared manuscript + video catalog
-src/print/          A5 print book (print.html entry)
-src/components/     web sections (WisdomMap, ChapterSection, VideoSection, …)
-src/styles/         tokens.css, site.css, fonts.ts
+src/print/          the 40 A5 pages (BookPages) + print.html entry for the PDF
+src/book/           flipbook website (index.html entry) that renders the same BookPages
+src/components/     Sprig (botanical line art)
+src/styles/         tokens.css, fonts.ts
 public/assets/      photos (CC0), YouTube thumbnails, paper grain
 scripts/            export-content.mjs, export-pdf.mjs, pdf_qa.py, site-screenshots.mjs
 content/            editorial-manuscript.md, video-catalog.json   (generated)

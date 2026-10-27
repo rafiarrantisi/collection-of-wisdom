@@ -2,125 +2,302 @@
   "widths": {
     "320": {
       "scrollWidth": 320,
+      "scrollHeight": 640,
       "clientWidth": 320,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 640,
+      "mode": "portrait",
+      "pageWidthPx": 296,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     },
     "375": {
       "scrollWidth": 375,
+      "scrollHeight": 812,
       "clientWidth": 375,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 812,
+      "mode": "portrait",
+      "pageWidthPx": 351,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     },
     "390": {
       "scrollWidth": 390,
+      "scrollHeight": 844,
       "clientWidth": 390,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 844,
+      "mode": "portrait",
+      "pageWidthPx": 366,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     },
     "430": {
       "scrollWidth": 430,
+      "scrollHeight": 932,
       "clientWidth": 430,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 932,
+      "mode": "portrait",
+      "pageWidthPx": 406,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     },
     "768": {
       "scrollWidth": 768,
+      "scrollHeight": 1024,
       "clientWidth": 768,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 1024,
+      "mode": "landscape",
+      "pageWidthPx": 372,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     },
     "1024": {
       "scrollWidth": 1024,
+      "scrollHeight": 768,
       "clientWidth": 1024,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 768,
+      "mode": "landscape",
+      "pageWidthPx": 428,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     },
     "1440": {
       "scrollWidth": 1440,
+      "scrollHeight": 900,
       "clientWidth": 1440,
-      "overflowing": [],
-      "brokenImgs": [],
-      "smallTargets": [],
-      "navHeightPct": 6,
-      "h1": 1
+      "clientHeight": 900,
+      "mode": "landscape",
+      "pageWidthPx": 521,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
+    },
+    "1920": {
+      "scrollWidth": 1920,
+      "scrollHeight": 1080,
+      "clientWidth": 1920,
+      "clientHeight": 1080,
+      "mode": "landscape",
+      "pageWidthPx": 648,
+      "bookFits": true,
+      "h1": 1,
+      "brokenImgs": 0
     }
+  },
+  "desktop": {
+    "start": "Sampul / 40",
+    "afterArrow": "Halaman 2–3 / 40",
+    "afterTocLink": "Halaman 16–17 / 40",
+    "atMap": "Halaman 6–7 / 40",
+    "afterMapLink": "Halaman 10–11 / 40",
+    "afterDrag": "Halaman 12–13 / 40",
+    "atVideos": "Halaman 30–31 / 40",
+    "videoLinks": [
+      {
+        "href": "https://youtu.be/jGc668FpPRQ",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/jGc668FpPRQ",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/jGc668FpPRQ",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/jGc668FpPRQ",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/AVKtZwYAD9g",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/AVKtZwYAD9g",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/AVKtZwYAD9g",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/AVKtZwYAD9g",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/SgK0Okc0M2k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/SgK0Okc0M2k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/SgK0Okc0M2k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/SgK0Okc0M2k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/eV497nxN8W4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/eV497nxN8W4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/eV497nxN8W4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/eV497nxN8W4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/kf3f-l2n4-k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/kf3f-l2n4-k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/kf3f-l2n4-k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/kf3f-l2n4-k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/ulTiWbGB24E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/ulTiWbGB24E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/ulTiWbGB24E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/ulTiWbGB24E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/VSkAS9x-23E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/VSkAS9x-23E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/VSkAS9x-23E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/VSkAS9x-23E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/jGc668FpPRQ",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/AVKtZwYAD9g",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/SgK0Okc0M2k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/eV497nxN8W4",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/kf3f-l2n4-k",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/ulTiWbGB24E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "href": "https://youtu.be/VSkAS9x-23E",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ],
+    "videoClickOpened": "https://www.youtube.com/watch?v=AVKtZwYAD9g&feature=youtu.be",
+    "videoClickSamePage": true,
+    "zoomPages": 2,
+    "zoomClosed": true,
+    "atEnd": "Sampul belakang / 40",
+    "deepLink24": "Halaman 24–25 / 40",
+    "freshLink17": "Halaman 16–17 / 40",
+    "pdf": {
+      "href": "http://localhost:4180/A_Collection_of_Wisdom.pdf",
+      "status": 200,
+      "bytes": 2868271,
+      "type": "application/pdf"
+    }
+  },
+  "mobile": {
+    "start": "Sampul / 40",
+    "afterNext": "Halaman 2 / 40",
+    "afterNext2": "Halaman 3 / 40",
+    "afterTocTap": "Halaman 7 / 40",
+    "atVideo": "Halaman 30 / 40",
+    "zoomBodyFontPx": 15.6,
+    "pageWidthPx": 366
   },
   "errors": [],
-  "videoLinks": [
-    {
-      "href": "https://youtu.be/jGc668FpPRQ",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    },
-    {
-      "href": "https://youtu.be/AVKtZwYAD9g",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    },
-    {
-      "href": "https://youtu.be/SgK0Okc0M2k",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    },
-    {
-      "href": "https://youtu.be/eV497nxN8W4",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    },
-    {
-      "href": "https://youtu.be/kf3f-l2n4-k",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    },
-    {
-      "href": "https://youtu.be/ulTiWbGB24E",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    },
-    {
-      "href": "https://youtu.be/VSkAS9x-23E",
-      "target": "_blank",
-      "rel": "noopener noreferrer"
-    }
-  ],
-  "pdf": {
-    "href": "http://localhost:4180/A_Collection_of_Wisdom.pdf",
-    "status": 200,
-    "contentType": "application/pdf",
-    "bytes": 2866113
-  },
-  "map": {
-    "mouseClickChapter02Top": 76,
-    "keyboardEnterChapter04Top": 76
-  },
   "blocking": [],
-  "filterCounts": {
-    "Keuangan": 2,
-    "Pernikahan": 2,
-    "Komunikasi": 2,
-    "Refleksi": 1,
-    "Semua": 7
-  },
-  "copyLabel": "Tersalin — siap dibagikan",
-  "clipboard": "“Solid bukan berarti selalu bersama; solid berarti tetap saling menjaga, meskipun kesibukan setiap orang berbeda.”\r\n— A Collection of Wisdom",
-  "reducedMotionHidden": 0
+  "reducedMotion": "Halaman 2–3 / 40"
 }

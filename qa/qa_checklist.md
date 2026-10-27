@@ -30,30 +30,41 @@ overflow on p5/p19/p36/p37 (re-spaced, video thumbnail narrowed, write-lines red
 map connector crossed a label; orphaned word in a tagline; “hari-/hari” broken across lines (reduplicated words now never break);
 QR link label 1 mm past right margin; photos re-rasterised by CSS filters (10.7 MB → 2.9 MB after baking the grade into the JPEGs).
 
-## Website
+## Website (flipbook)
+
+Results from `node scripts/site-screenshots.mjs` against the production build (Chrome 155).
 
 | Check | Result |
 |---|---|
 | `npm run build` (tsc + vite) | PASS |
-| Console errors in main flows | PASS — none at any width |
-| Horizontal overflow at 320 / 375 / 390 / 430 / 768 / 1024 / 1440 px | PASS — scrollWidth = clientWidth at every width |
-| Tap targets ≥ 44 px (buttons, chips, nav) | PASS at all widths |
-| Mobile nav height | PASS — 6 % of a 900 px viewport |
-| Exactly one `h1`, skip link, landmarks | PASS |
-| Wisdom map by mouse | PASS — node 02 lands chapter 02 at 76 px (= under sticky nav) |
-| Wisdom map by keyboard (Tab + Enter) | PASS — node 04 lands chapter 04 at 76 px |
-| Mobile menu jump to a chapter | PASS (after fix: menu sheet was pushing layout and caused a 455 px overshoot) |
-| 7 video cards, real thumbnails, correct links, `target=_blank rel=noopener noreferrer` | PASS |
-| Topic filters | PASS — Keuangan 2, Pernikahan 2, Komunikasi 2, Refleksi 1, Semua 7 |
-| “Simpan kutipan” copy | PASS — clipboard contains the quote |
-| PDF download in production build | PASS — `A_Collection_of_Wisdom.pdf` served 200, 2 866 113 bytes |
-| `prefers-reduced-motion` | PASS — no content hidden, animations off |
-| Screenshots | `qa/screenshots/` desktop-home, desktop-map, desktop-chapter, desktop-videos, tablet-home, mobile-home, mobile-map, mobile-chapter, mobile-videos, mobile-menu, mobile-closing |
+| Console errors | PASS — none |
+| No page scroll / book fits viewport at 320×640, 375×812, 390×844, 430×932, 768×1024, 1024×768, 1440×900, 1920×1080 | PASS — portrait (single page) below 560 px wide, two-page spread above |
+| Exactly one `h1` (the cover title) | PASS |
+| Open the cover with → key | PASS — Sampul → Halaman 2–3 |
+| Contents page link (chapter 03) | PASS — lands on 16–17 |
+| Wisdom-map node link (chapter 02) | PASS — lands on 10–11 |
+| Drag the page corner (real page curl) | PASS — 10–11 → 12–13 (screenshot `desktop-mid-flip.png`) |
+| “Daftar isi” panel jumps | PASS — to map (6–7) and videos (29 → 30–31) |
+| Video links in pages | PASS — all 7 IDs present, `target=_blank rel=noopener noreferrer`; clicking a title opened YouTube and did not turn the page |
+| Zoom (“Perbesar”) | PASS — shows both pages of the spread, closes with Esc; on a 390 px phone body text renders at 15.6 px |
+| Back cover closes the book | PASS — End key → “Sampul belakang” |
+| Shareable page links | PASS — `#p-24` while open → 24–25; fresh visit to `#p-17` → 16–17 |
+| Mobile (touch, 390×844) | PASS — next button → 2 → 3; tapping the contents row → 7; contents panel → 30 |
+| `prefers-reduced-motion` | PASS — pages still turn, instantly |
+| PDF download | PASS — 200, application/pdf, 2 868 271 bytes |
+| Screenshots | `qa/screenshots/` desktop-cover, desktop-spread-dedication-contents, desktop-chapter03, desktop-map, desktop-mid-flip, desktop-contents-panel, desktop-videos, desktop-zoom, desktop-back-cover, tablet-cover, mobile-cover, mobile-contents, mobile-chapter01, mobile-contents-panel, mobile-video, mobile-zoom |
+
+Bug found and fixed in this loop: with `disableFlipByClick` on, the page-flip engine silently ignored
+`flipNext()` in portrait mode (phones could not turn pages from the buttons). Tapping a page now turns it, as in a real book;
+links are excluded from flipping.
 
 ## Not done / limitations
 
 - **Lighthouse was not run** (not installed here); no score is claimed.
-- Cross-browser: only Chromium (Chrome 155) was tested; Safari/Firefox not tested.
+- Cross-browser: only Chromium (Chrome 155) was tested; Safari/Firefox and a real phone were not tested
+  (touch was emulated). Swipe gestures were not automated — taps, buttons and mouse drag were.
+- On phones a full A5 page is ~366 px wide, so body text in the book view is small by nature; the “Perbesar”
+  view is the intended way to read comfortably.
 - QR codes were verified by decoding the rendered PDF, not by scanning a physical print.
 - No separate print-ready file with 3 mm bleed/crop marks was produced. The PDF is a standard A5 digital/print
   file; full-bleed photo pages have no bleed, so a commercial printer would need a bleed version.

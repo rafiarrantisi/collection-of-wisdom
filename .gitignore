@@ -8,3 +8,4 @@ project-source.zip
 .tmp
 qa/pages
 .vercel
+*.tsbuildinfo

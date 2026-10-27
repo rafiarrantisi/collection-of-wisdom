@@ -467,6 +467,10 @@ img {
 }
 
 .toc li {
+  display: block;
+}
+
+.toc-row {
   display: flex;
   align-items: baseline;
   gap: 2.5mm;
