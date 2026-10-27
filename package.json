@@ -1,0 +1,33 @@
+{
+  "name": "a-collection-of-wisdom",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "pdf": "node scripts/export-content.mjs && node scripts/export-pdf.mjs",
+    "qa:pdf": "python scripts/pdf_qa.py",
+    "qa:site": "node scripts/site-screenshots.mjs",
+    "content": "node scripts/export-content.mjs",
+    "qa": "python scripts/pdf_qa.py && node scripts/site-screenshots.mjs"
+  },
+  "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/dm-sans": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "playwright-core": "^1.64.1",
+    "qrcode": "^1.5.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

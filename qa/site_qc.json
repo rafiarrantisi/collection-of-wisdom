@@ -1,0 +1,126 @@
+{
+  "widths": {
+    "320": {
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    },
+    "375": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    },
+    "390": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    },
+    "430": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    },
+    "768": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    },
+    "1024": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    },
+    "1440": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflowing": [],
+      "brokenImgs": [],
+      "smallTargets": [],
+      "navHeightPct": 6,
+      "h1": 1
+    }
+  },
+  "errors": [],
+  "videoLinks": [
+    {
+      "href": "https://youtu.be/jGc668FpPRQ",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtu.be/AVKtZwYAD9g",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtu.be/SgK0Okc0M2k",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtu.be/eV497nxN8W4",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtu.be/kf3f-l2n4-k",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtu.be/ulTiWbGB24E",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "href": "https://youtu.be/VSkAS9x-23E",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  ],
+  "pdf": {
+    "href": "http://localhost:4180/A_Collection_of_Wisdom.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 2866113
+  },
+  "map": {
+    "mouseClickChapter02Top": 76,
+    "keyboardEnterChapter04Top": 76
+  },
+  "blocking": [],
+  "filterCounts": {
+    "Keuangan": 2,
+    "Pernikahan": 2,
+    "Komunikasi": 2,
+    "Refleksi": 1,
+    "Semua": 7
+  },
+  "copyLabel": "Tersalin — siap dibagikan",
+  "clipboard": "“Solid bukan berarti selalu bersama; solid berarti tetap saling menjaga, meskipun kesibukan setiap orang berbeda.”\r\n— A Collection of Wisdom",
+  "reducedMotionHidden": 0
+}

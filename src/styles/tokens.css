@@ -1,0 +1,18 @@
+/* Design tokens shared by the web edition and the print book.
+   Edit colours and type families here; both editions follow. */
+:root {
+  --paper: #f2ebdd;        /* Paper Ivory */
+  --linen: #e7ddcd;        /* Warm Linen */
+  --oat: #d3c5b3;          /* Oat / Stone */
+  --ink: #3f3832;          /* Ink Brown, deepened ~5% for print contrast */
+  --taupe: #6f6459;        /* Muted Taupe, deepened ~8% for AA contrast */
+  --olive: #6f7768;        /* Olive Grey, deepened slightly */
+  --line: #bfb3a2;         /* Fine Line */
+  --print-white: #faf7f1;  /* Print White */
+  --qr-ink: #2b2621;
+
+  --serif: 'Cormorant Garamond', 'EB Garamond', Garamond, 'Times New Roman', serif;
+  --sans: 'DM Sans', 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
