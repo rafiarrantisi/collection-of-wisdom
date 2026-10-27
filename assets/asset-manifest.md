@@ -3,7 +3,7 @@
 All photographs are **CC0 / public domain**, found through the official
 [Openverse API](https://api.openverse.org/) (license filter `cc0,pdm`), downloaded once
 and stored locally under `public/assets/photos/`. Nothing is hotlinked at runtime.
-None of the photos depict the Mayon community, its members, Persit insignia or any real event;
+None of the CC0 photos depict the Mayon community, its members, Persit insignia or any real event;
 they are generic still-life / lifestyle images used for atmosphere only.
 
 A gentle colour grade (saturation ×0.82, slight warm shift; ×0.45 for `journal-hands`) was
@@ -28,6 +28,25 @@ baked into the files so the PDF can embed the original JPEG stream without re-ra
 roughly 165–330 effective dpi in the A5 PDF (full-bleed photo pages are at the low end, ~165 dpi).
 That is fine on screen and on an office/home printer; for offset printing, replace those files with
 higher-resolution originals from the same source pages.
+
+## Community photos (“Moments Together”, pages 39–42)
+
+Seven real photos supplied by the organiser (Teteh) as `Foto dari Teteh.zip` on 2026-10-27, stored in
+`public/assets/moments/`. They are used with the organiser's permission for this keepsake only.
+Files were re-encoded to strip all EXIF metadata (including any GPS location); pixels are unedited and uncropped
+(frames match each photo's own aspect ratio). No captions, dates or places were invented.
+
+| File | Original |
+|---|---|
+| field-gathering.jpg | WhatsApp Image 2026-10-27 at 10.59.55 AM.jpeg |
+| plated-dish.jpg | WhatsApp Image 2026-10-27 at 10.59.56 AM (1).jpeg |
+| green-uniform-group.jpg | WhatsApp Image 2026-10-27 at 10.59.56 AM (2).jpeg |
+| big-group-standing.jpg | WhatsApp Image 2026-10-27 at 10.59.56 AM (3).jpeg |
+| picnic-artworks.jpg | WhatsApp Image 2026-10-27 at 10.59.56 AM (4).jpeg |
+| celebration-group.jpg | WhatsApp Image 2026-10-27 at 10.59.56 AM (5).jpeg |
+| mayon-table.jpg | WhatsApp Image 2026-10-27 at 10.59.56 AM.jpeg |
+
+These photos show identifiable adults and children. The website is public, so anyone with the link can see them.
 
 ## YouTube thumbnails
 

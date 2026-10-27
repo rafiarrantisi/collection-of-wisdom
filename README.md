@@ -6,9 +6,9 @@ a keepsake gathered from a sharing session of the ibu-ibu **Mayon** community.
 Two editions, one identity:
 
 1. **Keepsake PDF** — `A_Collection_of_Wisdom.pdf` (also `public/A_Collection_of_Wisdom.pdf`).
-   A5 portrait, 40 pages, real selectable text, embedded fonts, clickable links and a scannable QR code for each of the
+   A5 portrait, 44 pages, real selectable text, embedded fonts, clickable links and a scannable QR code for each of the
    seven curated videos.
-2. **Flipbook website** — the same 40 pages as a real book you open, page through and close
+2. **Flipbook website** — the same 44 pages as a real book you open, page through and close
    (live at https://collection-of-wisdom.vercel.app). Two-page spreads on desktop/tablet, single pages on phones;
    turn pages by tapping, swiping, dragging a corner, the arrow buttons or ← → keys. The contents page and wisdom map
    are clickable, video titles/thumbnails/QR open YouTube, “Daftar isi” jumps to any section, “Perbesar” shows the

@@ -321,7 +321,7 @@ Disusun sebagai rangkuman editorial dari berbagai catatan tertulis dalam sesi be
 
 Catatan: Saran terkait pernikahan, keuangan, dan kehidupan organisasi dalam buku ini merupakan bahan refleksi umum, bukan pengganti pendampingan profesional atau aturan resmi organisasi. Konteks setiap keluarga berbeda.
 
-Foto: koleksi CC0 dari StockSnap, rawpixel, dan WordPress Photos. Huruf: Cormorant Garamond & DM Sans (SIL Open Font License).
+Foto kegiatan: dokumentasi ibu-ibu Mayon. Foto suasana: CC0 (StockSnap, rawpixel, WordPress Photos). Huruf: Cormorant Garamond & DM Sans (OFL).
 
 ## Back cover
 _The little things we learn together_  

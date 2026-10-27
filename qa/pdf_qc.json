@@ -1,8 +1,8 @@
 {
   "file": "A_Collection_of_Wisdom.pdf",
-  "bytes": 2868271,
+  "bytes": 4740867,
   "encrypted": false,
-  "page_count": 40,
+  "page_count": 44,
   "pages": [
     {
       "page": 1,
@@ -26,7 +26,7 @@
         148.17,
         209.89
       ],
-      "chars": 375
+      "chars": 404
     },
     {
       "page": 4,
@@ -314,10 +314,42 @@
         148.17,
         209.89
       ],
-      "chars": 1325
+      "chars": 354
     },
     {
       "page": 40,
+      "size_mm": [
+        148.17,
+        209.89
+      ],
+      "chars": 74
+    },
+    {
+      "page": 41,
+      "size_mm": [
+        148.17,
+        209.89
+      ],
+      "chars": 74
+    },
+    {
+      "page": 42,
+      "size_mm": [
+        148.17,
+        209.89
+      ],
+      "chars": 109
+    },
+    {
+      "page": 43,
+      "size_mm": [
+        148.17,
+        209.89
+      ],
+      "chars": 1342
+    },
+    {
+      "page": 44,
       "size_mm": [
         148.17,
         209.89
@@ -472,59 +504,59 @@
       "uri": "https://youtu.be/VSkAS9x-23E"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/jGc668FpPRQ"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/jGc668FpPRQ"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/AVKtZwYAD9g"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/AVKtZwYAD9g"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/SgK0Okc0M2k"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/SgK0Okc0M2k"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/eV497nxN8W4"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/eV497nxN8W4"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/kf3f-l2n4-k"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/kf3f-l2n4-k"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/ulTiWbGB24E"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/ulTiWbGB24E"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/VSkAS9x-23E"
     },
     {
-      "page": 39,
+      "page": 43,
       "uri": "https://youtu.be/VSkAS9x-23E"
     }
   ],

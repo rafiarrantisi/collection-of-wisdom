@@ -5,6 +5,7 @@ import {
   chapters,
   closing,
   explore,
+  moments,
   opening,
   reflection,
   sources,
@@ -203,6 +204,55 @@ function VideoPage({ video, first }: { video: Video; first: boolean }) {
         </div>
       </div>
       {video.key === 'G' && <p className="explore-closing">{explore.closingLine}</p>}
+    </div>
+  );
+}
+
+function Moment({ photo, className }: { photo: Photo & { ratio: string }; className?: string }) {
+  return (
+    <figure className={`moment${className ? ` ${className}` : ''}`} style={{ aspectRatio: photo.ratio }}>
+      <img src={photo.src} alt={photo.alt} />
+    </figure>
+  );
+}
+
+function MomentsPage({ part }: { part: 1 | 2 | 3 | 4 }) {
+  const m = moments.photos;
+  const head = <RunningHead left="Moments Together" right="Dari kebersamaan ibu-ibu Mayon" />;
+  if (part === 1)
+    return (
+      <div className="safe flow moments">
+        <p className="kicker">{moments.kicker}</p>
+        <h2 className="page-title">{moments.title}</h2>
+        <p className="a-deck">{moments.deck}</p>
+        <p className="moments-intro">{typeset(moments.paragraph)}</p>
+        <Moment photo={m.field} className="m-bottom" />
+      </div>
+    );
+  if (part === 2)
+    return (
+      <div className="safe flow moments">
+        {head}
+        <Moment photo={m.standing} />
+        <Moment photo={m.picnic} className="m-gap" />
+      </div>
+    );
+  if (part === 3)
+    return (
+      <div className="safe flow moments">
+        {head}
+        <Moment photo={m.uniform} className="m-portrait-lg" />
+      </div>
+    );
+  return (
+    <div className="safe flow moments">
+      {head}
+      <Moment photo={m.celebration} />
+      <div className="m-pair m-gap">
+        <Moment photo={m.dish} />
+        <Moment photo={m.table} />
+      </div>
+      <p className="moments-close">{moments.closingLine}</p>
     </div>
   );
 }
@@ -422,6 +472,15 @@ function buildPages(): PageSpec[] {
     ),
   });
 
+  ([1, 2, 3, 4] as const).forEach((part) =>
+    add({
+      key: `moments-${part}`,
+      tocKey: part === 1 ? 'moments' : undefined,
+      folio: true,
+      render: () => <MomentsPage part={part} />,
+    }),
+  );
+
   add({
     key: 'sources',
     folio: true,
@@ -490,6 +549,7 @@ export function BookPages({ leaves = false }: BookPagesProps) {
     ...chapters.map((c) => ({ label: c.number, title: c.title, theme: c.theme, page: pageOf(c.id) })),
     { label: '', title: 'A Little More to Explore', theme: 'Pilihan Video', page: pageOf('explore') },
     { label: '', title: 'A Note to Carry Home', theme: 'Penutup', page: pageOf('closing') },
+    { label: '', title: 'Moments Together', theme: 'Kenangan', page: pageOf('moments') },
   ];
 
   return pages.map((p, i) => {
@@ -539,6 +599,7 @@ export function bookSections(): { title: string; theme: string; page: number }[]
     { title: 'A Little More to Explore', theme: 'Pilihan Video', page: pageOf('explore') },
     { title: 'A Moment to Reflect', theme: 'Refleksi', page: pageOf('reflect') },
     { title: 'A Note to Carry Home', theme: 'Penutup', page: pageOf('closing') },
+    { title: 'Moments Together', theme: 'Kenangan', page: pageOf('moments') },
   ];
 }
 

@@ -90,13 +90,13 @@
     }
   },
   "desktop": {
-    "start": "Sampul / 40",
-    "afterArrow": "Halaman 2–3 / 40",
-    "afterTocLink": "Halaman 16–17 / 40",
-    "atMap": "Halaman 6–7 / 40",
-    "afterMapLink": "Halaman 10–11 / 40",
-    "afterDrag": "Halaman 12–13 / 40",
-    "atVideos": "Halaman 30–31 / 40",
+    "start": "Sampul / 44",
+    "afterArrow": "Halaman 2–3 / 44",
+    "afterTocLink": "Halaman 16–17 / 44",
+    "atMap": "Halaman 6–7 / 44",
+    "afterMapLink": "Halaman 10–11 / 44",
+    "afterDrag": "Halaman 12–13 / 44",
+    "atVideos": "Halaman 30–31 / 44",
     "videoLinks": [
       {
         "href": "https://youtu.be/jGc668FpPRQ",
@@ -278,26 +278,26 @@
     "videoClickSamePage": true,
     "zoomPages": 2,
     "zoomClosed": true,
-    "atEnd": "Sampul belakang / 40",
-    "deepLink24": "Halaman 24–25 / 40",
-    "freshLink17": "Halaman 16–17 / 40",
+    "atEnd": "Sampul belakang / 44",
+    "deepLink24": "Halaman 24–25 / 44",
+    "freshLink17": "Halaman 16–17 / 44",
     "pdf": {
       "href": "http://localhost:4180/A_Collection_of_Wisdom.pdf",
       "status": 200,
-      "bytes": 2868271,
+      "bytes": 4740867,
       "type": "application/pdf"
     }
   },
   "mobile": {
-    "start": "Sampul / 40",
-    "afterNext": "Halaman 2 / 40",
-    "afterNext2": "Halaman 3 / 40",
-    "afterTocTap": "Halaman 7 / 40",
-    "atVideo": "Halaman 30 / 40",
+    "start": "Sampul / 44",
+    "afterNext": "Halaman 2 / 44",
+    "afterNext2": "Halaman 3 / 44",
+    "afterTocTap": "Halaman 7 / 44",
+    "atVideo": "Halaman 30 / 44",
     "zoomBodyFontPx": 15.6,
     "pageWidthPx": 366
   },
   "errors": [],
   "blocking": [],
-  "reducedMotion": "Halaman 2–3 / 40"
+  "reducedMotion": "Halaman 2–3 / 44"
 }

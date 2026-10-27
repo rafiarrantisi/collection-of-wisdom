@@ -8,9 +8,9 @@ Machine-readable results: `qa/pdf_qc.json`, `qa/site_qc.json`.
 
 | Check | Result |
 |---|---|
-| File exists, opens, not encrypted | PASS — `A_Collection_of_Wisdom.pdf`, 2.87 MB |
-| Page count multiple of 4 | PASS — 40 pages (36 proposed + 4 to give each of the 7 videos its own page) |
-| Every page A5 | PASS — 148.0 × 210.0 mm on all 40 pages |
+| File exists, opens, not encrypted | PASS — `A_Collection_of_Wisdom.pdf`, 4.7 MB |
+| Page count multiple of 4 | PASS — 44 pages (36 proposed + 4 so each of the 7 videos has its own page + 4 “Moments Together” photo pages) |
+| Every page A5 | PASS — 148.0 × 210.0 mm on all 44 pages |
 | Real, extractable text; no replacement glyphs | PASS — all pages, curly quotes / em dashes / `&` / `·` extract correctly |
 | Fonts embedded | PASS — 7 subset Type0 fonts (Cormorant Garamond Light/Regular/Italic/Medium, DM Sans Regular/Italic/Medium), no Type3 |
 | Text inside safe area (≥ 9 mm from trim incl. folio; body ≥ 15 mm) | PASS — automated span check on all pages + in-browser check before export |
@@ -21,8 +21,8 @@ Machine-readable results: `qa/pdf_qc.json`, `qa/site_qc.json`.
 | 7 clickable video links | PASS — 48 link annotations; each of the 7 `https://youtu.be/<id>` present |
 | 7 unique QR codes decode to exact URLs | PASS — OpenCV decoded all 7 at 300 dpi; each equals its expected URL; QR is 27 mm incl. quiet zone |
 | Thumbnails real (not placeholder) | PASS — all 7 are 1280×720 maxres thumbnails |
-| Contact sheet of every page | PASS — `qa/contact_sheet.png` (40 pages, 180 dpi renders) |
-| Visual reading check | PASS — every page viewed as rendered spreads; individually re-checked after fixes: 3, 5, 6, 10, 19, 20, 29–36, 37, 38, 39 |
+| Contact sheet of every page | PASS — `qa/contact_sheet.png` (44 pages, 180 dpi renders) |
+| Visual reading check | PASS — every page viewed as rendered spreads; individually re-checked after fixes: 3, 5, 6, 10, 19, 20, 29–36, 37, 38, 39–43 |
 | Content guardrails | PASS — no “Mayor”, no personal names from the notes, no gender-neuroscience numbers, no survey statistics; 30% / 10% labelled as general guidance; “Rame ing gawe, sepi ing pamrih” unattributed |
 
 Issues found and fixed during the loop (not hidden):
@@ -51,7 +51,7 @@ Results from `node scripts/site-screenshots.mjs` against the production build (C
 | Shareable page links | PASS — `#p-24` while open → 24–25; fresh visit to `#p-17` → 16–17 |
 | Mobile (touch, 390×844) | PASS — next button → 2 → 3; tapping the contents row → 7; contents panel → 30 |
 | `prefers-reduced-motion` | PASS — pages still turn, instantly |
-| PDF download | PASS — 200, application/pdf, 2 868 271 bytes |
+| PDF download | PASS — 200, application/pdf |
 | Screenshots | `qa/screenshots/` desktop-cover, desktop-spread-dedication-contents, desktop-chapter03, desktop-map, desktop-mid-flip, desktop-contents-panel, desktop-videos, desktop-zoom, desktop-back-cover, tablet-cover, mobile-cover, mobile-contents, mobile-chapter01, mobile-contents-panel, mobile-video, mobile-zoom |
 
 Bug found and fixed in this loop: with `disableFlipByClick` on, the page-flip engine silently ignored

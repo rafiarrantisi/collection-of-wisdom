@@ -471,6 +471,31 @@ export const closing = {
   signoff: 'With warmth, gratitude, and a little more wisdom.',
 };
 
+const moment = (name: string, alt: string, ratio: '4/3' | '16/9' | '3/4'): Photo & { ratio: string } => ({
+  src: `assets/moments/${name}.jpg`,
+  alt,
+  ratio,
+});
+
+/** Real photos shared by the organiser. No invented captions, dates or places. */
+export const moments = {
+  kicker: 'Moments Together',
+  title: 'Little Moments, Lasting Memories',
+  deck: 'Kebersamaan yang kita jalani, dalam beberapa bingkai.',
+  paragraph:
+    'Di balik setiap pesan dalam buku ini, ada wajah-wajah dan waktu yang dijalani bersama: duduk di atas rumput, berkarya, merayakan, dan saling menemani. Halaman-halaman berikut adalah sebagian kecil kenangannya.',
+  closingLine: 'Terima kasih sudah tumbuh bersama.',
+  photos: {
+    field: moment('field-gathering', 'Ibu-ibu Mayon duduk bersama di lapangan rumput di bawah atap terbuka', '4/3'),
+    standing: moment('big-group-standing', 'Ibu-ibu Mayon dan anak-anak berdiri berjajar di lapangan, berlatar pepohonan', '16/9'),
+    picnic: moment('picnic-artworks', 'Ibu-ibu duduk di rumput sambil menunjukkan karya buatan bersama', '4/3'),
+    uniform: moment('green-uniform-group', 'Ibu-ibu berseragam hijau berfoto di depan meja hidangan', '3/4'),
+    celebration: moment('celebration-group', 'Ibu-ibu dan anak-anak berfoto bersama di sebuah perayaan ulang tahun', '16/9'),
+    dish: moment('plated-dish', 'Hidangan yang ditata cantik di atas piring putih', '3/4'),
+    table: moment('mayon-table', 'Meja hidangan bertaplak putih dengan papan nama Mayon', '3/4'),
+  },
+};
+
 export const sources = {
   title: 'Behind These Pages',
   paragraphs: [
@@ -479,7 +504,7 @@ export const sources = {
   disclaimer:
     'Catatan: Saran terkait pernikahan, keuangan, dan kehidupan organisasi dalam buku ini merupakan bahan refleksi umum, bukan pengganti pendampingan profesional atau aturan resmi organisasi. Konteks setiap keluarga berbeda.',
   photoCredit:
-    'Foto: koleksi CC0 dari StockSnap, rawpixel, dan WordPress Photos. Huruf: Cormorant Garamond & DM Sans (SIL Open Font License).',
+    'Foto kegiatan: dokumentasi ibu-ibu Mayon. Foto suasana: CC0 (StockSnap, rawpixel, WordPress Photos). Huruf: Cormorant Garamond & DM Sans (OFL).',
 };
 
 export const backCover = {
